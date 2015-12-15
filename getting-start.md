@@ -6,7 +6,7 @@
 
 Lime 的安装由如下两步组成:
 
-* 从 Github 下载 Lime 框架
+* 从 [Github](https://github.com/icodechef/Lime) 下载 Lime 框架
 * 将 Lime 压缩包解压至一个 Web 可访问的目录
 
 ## 基本用法
