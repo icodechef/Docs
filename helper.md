@@ -103,3 +103,21 @@ url_base('login.php');  // 返回 `/blog/login.php`
 ```
 
 `url_site()` 与 `url_base()` 区别主要在于是否包括 host info 部分
+
+### url_for()
+
+返回指定路由的 URL
+
+例如，定义了一个名称为 'post-edit' 的路由:
+
+```php
+$app->get('/post/edit/<pid>', function() {
+   // code ... 
+})->name('post-edit');
+```
+
+其 `URI` 表达式为 `/post/edit/<pid>`, 接着我们可以这样：
+
+```php
+url_for('post-edit', ['pid' => 10]); // 结果输出： /post/edit/<pid>
+```
