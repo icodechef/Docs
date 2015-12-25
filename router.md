@@ -163,6 +163,30 @@ $app->get('/user/<name>', function($name) {
 })->name('user');
 ```
 
+### 路由分组
+
+```php
+$app->group('/post', function() {
+    $this->get('/new', function() {
+        // code ...
+    });
+
+    $this->post('/del', function() {
+        // code ...
+    });
+});
+```
+
+路由分组的过滤函数
+
+```php
+$app->group('/post', function() {
+    // code ...
+}, function() {
+    // code ..
+});
+```
+
 ### 路由过滤
 
 路由过滤会在路由回调函数被调用前按顺序被执行。我们可以在路由过滤中进行判断或者其他操作：
